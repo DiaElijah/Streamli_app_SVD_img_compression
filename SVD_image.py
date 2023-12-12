@@ -34,7 +34,7 @@ match channel:
         case 'R':
             IMG = input_img.copy()
             IMG[:, :, [1,2]] = 0
-            IMG:, :, 0] = SVD_image(IMG[:, :, 0], k)
+            IMG[:, :, 0] = SVD_image(IMG[:, :, 0], k)
         case 'G':
             IMG = input_img.copy()
             IMG[:, :, [0,2]] = 0
