@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 st.write("""
-# Приложение для cингулярного разложения изображений
+# Приложение для cингулярного сжатия изображений
 """)
 
 st.sidebar.header('Пользовательская настройка')
@@ -49,7 +49,7 @@ match channel:
             IMG[:, :, 1] = SVD_image(IMG[:, :, 1], k)
             IMG[:, :, 2] = SVD_image(IMG[:, :, 2], k)
 
-st.subheader('Что же получается')
-# st.image(IMG, caption='SVD Image', use_column_width=True)
+st.subheader('После сжатия')
+
 plt.imshow(IMG)
 st.pyplot(plt.gcf())
